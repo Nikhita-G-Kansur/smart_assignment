@@ -41,15 +41,19 @@ The system stores all data in a MySQL database and uses PHP for backend logic.
 ## 4. PROJECT STRUCTURE
 ```
 /project
-│── index.html
-│── login.php
-│── config.php
-│── teacher/
-│── student/
-│── uploads/
-│── assets/
-│── database/
-└── README.md
+│── README.md
+│── db.php
+│── index.php
+│── register.php
+│── logout.php
+│── dashboard_student.php
+│── dashboard_teacher.php
+│── create_assignment.php
+│── add_questions.php
+│── submit_assignment.php
+│── view_submission.php
+│── evaluate_assignment.php
+└── uploads/       (auto-created when files are uploaded)
 ```
 
 ---
@@ -68,15 +72,12 @@ xampp/htdocs/
 ### Step 3: Import Database  
 1. Open phpMyAdmin  
 2. Create a database  
-3. Import the SQL file located in:
-```
-/database/assignment.sql
-```
+3. Import the SQL file (export from your system).
 
 ### Step 4: Configure Database  
 Update database credentials in:
 ```
-config.php
+db.php
 ```
 
 ### Step 5: Run the Project  
@@ -93,14 +94,16 @@ http://localhost/your-project-folder
 - assignments  
 - assignment_questions  
 - submissions  
+- submission_answers  
 
 Each submission includes:  
 - Student ID  
 - Assignment ID  
-- File path  
+- Answer file per question  
 - Timestamp  
 - Status  
 - Marks  
+- Feedback  
 
 ---
 
@@ -126,8 +129,3 @@ Password: password
 - Analytics dashboard  
 - Cloud storage integration  
 - Plagiarism detection system  
-
----
-
-## 9. LICENSE
-This project is open-source and free to use.
