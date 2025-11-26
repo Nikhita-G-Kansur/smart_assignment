@@ -1,126 +1,133 @@
-Smart Assignment Submission System
+# SMART ASSIGNMENT SUBMISSION SYSTEM
+A simple web-based system for creating assignments, submitting files, and allowing teachers to view and evaluate student work.
 
-A web-based platform that allows students to submit assignments online and enables teachers to view, evaluate, and manage submissions efficiently.
-This system simplifies the submission workflow and reduces manual work.
+---
 
-Features
-Faculty Side
+## 1. OVERVIEW
+This project provides an online workflow for assignment submission.  
+Teachers can create assignments, and students can upload their files.  
+The system stores all data in a MySQL database and uses PHP for backend logic.
 
-Create and upload new assignments
+---
 
-Set deadlines
+## 2. FEATURES
 
-View all student submissions
+### 2.1 TEACHER FEATURES
+- Create assignments with questions  
+- Set submission deadlines  
+- View all submissions  
+- Download submitted files  
+- Check submission time (late/on-time)  
+- Evaluate and update marks  
 
-Download submitted files
+### 2.2 STUDENT FEATURES
+- View active assignments  
+- Upload files  
+- Check submission status  
+- View marks and feedback  
 
-Track late submissions
+---
 
-Update evaluation status
+## 3. TECHNOLOGIES USED
+- HTML  
+- CSS  
+- JavaScript  
+- PHP  
+- MySQL  
+- XAMPP  
 
-Student Side
+---
 
-View available assignments
-
-Upload and submit assignment files
-
-Check submission status
-
-View evaluated marks and feedback
-
-Technologies Used
-
-HTML5, CSS3
-
-JavaScript
-
-PHP (server-side logic)
-
-MySQL (database)
-
-XAMPP / Localhost for development
-
-Folder Structure
-project/
+## 4. PROJECT STRUCTURE
+```
+/project
 │── index.html
 │── login.php
 │── config.php
-│── student/
 │── teacher/
+│── student/
 │── uploads/
 │── assets/
 │── database/
 └── README.md
+```
 
-How to Run the Project Locally
+---
 
-Install a local server environment (XAMPP recommended).
+## 5. HOW TO RUN THE PROJECT (LOCALHOST)
 
+### Step 1: Install XAMPP  
+Install XAMPP (Apache + MySQL).
+
+### Step 2: Move Project Files  
 Place the project folder inside:
-
+```
 xampp/htdocs/
+```
 
-
-Start Apache and MySQL from XAMPP Control Panel.
-
-Open phpMyAdmin and import the SQL file located in:
-
+### Step 3: Import Database  
+1. Open phpMyAdmin  
+2. Create a database  
+3. Import the SQL file located in:
+```
 /database/assignment.sql
+```
 
+### Step 4: Configure Database  
+Update database credentials in:
+```
+config.php
+```
 
-Configure database credentials inside config.php.
+### Step 5: Run the Project  
+Open:
+```
+http://localhost/your-project-folder
+```
 
-Run the application in the browser:
+---
 
-http://localhost/project-folder-name
+## 6. DATABASE TABLES
+- students  
+- faculty  
+- assignments  
+- assignment_questions  
+- submissions  
 
-Database Structure
-Tables:
+Each submission includes:  
+- Student ID  
+- Assignment ID  
+- File path  
+- Timestamp  
+- Status  
+- Marks  
 
-students
+---
 
-faculty
+## 7. DEFAULT LOGIN (DEMO)
 
-assignments
-
-submissions
-
-Each submission contains:
-
-Student ID
-
-Assignment ID
-
-File path
-
-Submission timestamp
-
-Evaluation status
-
-Default Login Credentials (Demo)
-
-Student account:
-
-Username: student01  
+Teacher:  
+```
+Username: teacher01
 Password: password
+```
 
-
-Faculty account:
-
-Username: teacher01  
+Student:  
+```
+Username: student01
 Password: password
+```
 
+---
 
-(You can modify these in the database.)
+## 8. FUTURE IMPROVEMENTS
+- Email notifications  
+- Admin panel  
+- Analytics dashboard  
+- Cloud storage integration  
+- Plagiarism detection system  
 
-Future Enhancements
+---
 
-Email notification system
-
-Detailed marks with automatic score calculation
-
-Admin dashboard for managing users
-
-Cloud storage integration (Google Drive / AWS S3)
-
-Analytics for teacher dashboard
+## 9. LICENSE
+This project is open-source and free to use.
